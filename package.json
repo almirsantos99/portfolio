@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "sass": "^1.67.0"
+  },
+  "scripts": {
+    "start": "http-server -c-1 -p 8081"
+  }
+}

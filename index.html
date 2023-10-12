@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Almir Santos</title>
+    <meta name="description" content="Just a simple portfolio! Take a look about me, my projects and technologies." />
+    <link rel="icon" href="/assets/images/as-logo.svg">
     <link rel="stylesheet" href="dist/style.css">
     <script src="assets/scripts/main.js"></script>
     <script src="assets/scripts/particles.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNGSQJZ0CW"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZNGSQJZ0CW');
+    </script>
 </head>
 <body>
     <header id="header" class="header fixed inset-x-0 top-0 z-50">
@@ -14,7 +25,7 @@
             <div class="flex lg:flex-1">
                 <a href="#main" class="-m-1.5 p-1.5">
                     <span class="sr-only">A.S! Logo</span>
-                    <p class="text-4xl font-serif font-bold text-redneon-500 hover:text-red-400">A.S!</p>
+                    <img src="assets/images/as-logo.svg" class="w-28 as-logo" alt="A.S! Logo">
                 </a>
             </div>
             <div class="flex lg:hidden">
@@ -45,7 +56,7 @@
                 <div class="flex items-center justify-between">
                     <a href="#" class="-m-1.5 p-1.5">
                         <span class="sr-only">A.S! Logo</span>
-                        <p class="text-4xl font-serif font-bold text-redneon-500 hover:text-red-400">A.S!</p>
+                        <img src="assets/images/as-logo.svg" class="w-28 as-logo" alt="A.S! Logo">
                     </a>
                     <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
                         <span class="sr-only">Close menu</span>

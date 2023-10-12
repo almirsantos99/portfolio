@@ -21,44 +21,42 @@
 </head>
 <body>
     <header id="header" class="header fixed inset-x-0 top-0 z-50">
-        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-            <div class="flex lg:flex-1">
-                <a href="#main" class="-m-1.5 p-1.5">
-                    <span class="sr-only">A.S! Logo</span>
-                    <img src="assets/images/as-logo.svg" class="w-28 as-logo" alt="A.S! Logo">
-                </a>
-            </div>
-            <div class="flex lg:hidden">
-                <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                </button>
-            </div>
-            <div class="nav hidden lg:flex lg:gap-x-8 lg:flex-1 lg:justify-end lg:items-center">
-                <a href="#main" class="nav-item text-sm leading-6 text-gray-900 hover:text-redneon-500">Home</a>
-                <a href="#aboutme" class="nav-item text-sm leading-6 text-gray-900 hover:text-redneon-500">About Me</a>
-                <a href="#projects" class="nav-item text-sm leading-6 text-gray-900 hover:text-redneon-500">Projects</a>
-                <a href="#contact" class="nav-item text-sm leading-6 text-gray-900 hover:text-redneon-500">Contact</a>
-                <a href="Almir_Santos_-_Full_Stack_Developer.pdf" download="Almir_Santos.pdf" class="text-sm leading-6 text-redneon-500 rounded border border-redneon-500 hover:bg-red-600 hover:text-white border-solid px-2 py-1">Resume</a>
-            </div>
-        </nav>
+        <div class="header-backdrop">
+            <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+                <div class="flex lg:flex-1">
+                    <a href="#main" class="-m-1.5 p-1.5">
+                        <span class="sr-only">A.S! Logo</span>
+                        <img src="assets/images/as-logo.svg" class="w-28 as-logo" alt="A.S! Logo">
+                    </a>
+                </div>
+                <div class="flex lg:hidden">
+                    <button id="mobile_nav_open" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="nav hidden lg:flex lg:gap-x-8 lg:flex-1 lg:justify-end lg:items-center">
+                    <a href="#main" class="nav-item text-sm leading-6 text-gray-900 hover:text-redneon-500">Home</a>
+                    <a href="#aboutme" class="nav-item text-sm leading-6 text-gray-900 hover:text-redneon-500">About Me</a>
+                    <a href="#projects" class="nav-item text-sm leading-6 text-gray-900 hover:text-redneon-500">Projects</a>
+                    <a href="#contact" class="nav-item text-sm leading-6 text-gray-900 hover:text-redneon-500">Contact</a>
+                    <a href="Almir_Santos_-_Full_Stack_Developer.pdf" download="Almir_Santos.pdf" class="text-sm leading-6 text-redneon-500 rounded border border-redneon-500 hover:bg-red-600 hover:text-white border-solid px-2 py-1">Resume</a>
+                </div>
+            </nav>
+        </div>
         <!-- Mobile menu, show/hide based on menu open state. -->
-        <!-- Add JS events -->
-        <!-- Add JS events -->
-        <!-- Add JS events -->
-        <!-- Add JS events -->
-        <div class="lg:hidden" role="dialog" aria-modal="true">
+        <div id="mobile_nav" class="hidden lg:hidden" role="dialog" aria-modal="true">
             <!-- Background backdrop, show/hide based on slide-over state. -->
             <div class="fixed inset-0 z-50"></div>
             <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div class="flex items-center justify-between">
-                    <a href="#" class="-m-1.5 p-1.5">
+                    <a href="#main" class="-m-1.5 p-1.5">
                         <span class="sr-only">A.S! Logo</span>
                         <img src="assets/images/as-logo.svg" class="w-28 as-logo" alt="A.S! Logo">
                     </a>
-                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                    <button id="mobile_nav_close" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
                         <span class="sr-only">Close menu</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -68,11 +66,11 @@
                 <div class="mt-6 flow-root">
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6">
-                            <a href="#main_section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-blue-50">Home</a>
+                            <a href="#main" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-blue-50">Home</a>
                             <a href="#aboutme" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-blue-50">About Me</a>
                             <a href="#projects" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-blue-50">Projects</a>
                             <a href="#contact" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-blue-50">Contact</a>
-                            <!-- My resume  -->
+                            <a href="Almir_Santos_-_Full_Stack_Developer.pdf" download="Almir_Santos.pdf" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-blue-50 text-redneon-500">Resume</a>
                         </div>
                     </div>
                 </div>
@@ -92,7 +90,7 @@
                             <h2 class="text-3xl font-bold tracking-tight text-gray-600 sm:text-5xl">
                                 The best developer in the world 
                             </h2>
-                            <span class="text-xs tracking-tight font-thin font-sans">based on my mom opnion.</span>
+                            <span class="text-xs tracking-tight font-thin font-sans">based on my mom opnion</span>
                         </div>
                         <p class="max-w-xl text-gray-600">
                             Jokes aside, My name is <strong>Almir Santos</strong> and I'm a <a href="#aboutme" class="text-redneon-500 hover:text-red-400">Fullstack Developer</a> specialized on Wordpress and Web Development with some experience on Team Leading. Lately I'm focused on Test/Learn new things (At least for me) and search for a place that I could aggregate some knowledge.
@@ -107,8 +105,8 @@
                 <div class="container mx-auto">
                     <div class="sm:pm-0 lg:py-16">
                         <div class="grid lg:gap-8 xl:gap-0 lg:grid-cols-5 lg:items-center justify-center">
-                            <div class="lg:col-span-2 h-72 lg:h-full">
-                                <img class="h-full mx-auto object-cover rounded-3xl animation-float shadow-lg lg:shadow-2xl" src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1024&h=1280&q=80" alt="Me but on photo">
+                            <div class="lg:col-span-2 h-72 lg:h-full mt-3 lg:mt-0">
+                                <img class="h-full mx-auto object-cover rounded-3xl animation-float shadow-lg lg:shadow-2xl" src="https://images.unsplash.com/photo-1604964432806-254d07c11f32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGV2ZWxvcGVyfGVufDB8fDB8fHww&w=1000&q=80" alt="Me but on photo">
                             </div>
                             <div class="pt-12 lg:pt-0 lg:col-span-3 text-center lg:text-left lg:justify-self-end text-gray-600">
                                 <h3 class="text-xl pb-3 font-bold tracking-tight text-redneon-500 sm:text-3xl">About me</h3>

@@ -1,12 +1,20 @@
 window.onload = function() {
   /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-  particlesJS.load('particles-js', '/particles.json', function() {
-    console.log('callback - particles.js config loaded');
-  });
+  particlesJS.load('particles-js', '/particles.json');
 
   const header = document.getElementById('header');
+  const mobile_nav_open = document.getElementById('mobile_nav_open');
+  const mobile_nav_close = document.getElementById('mobile_nav_close');
+  const mobile_nav = document.getElementById('mobile_nav');
   const anchors = document.querySelectorAll('a[href^="#"]');
   const project_images = document.querySelectorAll('.project-autoscroll');
+
+  mobile_nav_open.addEventListener('click', toggleNavMobile);
+  mobile_nav_close.addEventListener('click', toggleNavMobile);
+  let mobile_nav_childs = mobile_nav.querySelectorAll('a');
+  mobile_nav_childs.forEach(function(el) {
+    el.addEventListener("click", toggleNavMobile);
+  });
 
   headerFixed();
 
@@ -29,14 +37,19 @@ window.onload = function() {
 
   window.addEventListener("scroll", headerFixed);
 
+  function toggleNavMobile() {
+    mobile_nav.classList.toggle('hidden');
+  }
+
   function smoothScroll(el) {
     var anchor = document.querySelector(el.getAttribute('href'));
     var anchorPaddingTop = parseFloat(window.getComputedStyle(anchor).getPropertyValue('padding-top'));
-    var anchorOffset = anchor.offsetTop + anchorPaddingTop;
+    var headerHeight = header.offsetHeight + 20;
+    var anchorOffset = anchor.offsetTop + anchorPaddingTop - headerHeight;
 
     window.scroll({
       behavior: 'smooth',
-      top: anchorOffset - 64,
+      top: anchorOffset,
     });
   }
 

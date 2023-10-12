@@ -4,44 +4,377 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Almir Santos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dist/style.css">
+    <script src="assets/scripts/main.js"></script>
+    <script src="assets/scripts/particles.js"></script>
 </head>
 <body>
-    <div class="notify-bar">
-        <p>This website is under development and the version that you actually looking is not the final one.</p>
-    </div>
-    <header class="header">
-        <div class="container">
-            <div class="main-nav-wrapper">
-                <a href="#" class="main-logo">A.S!</a>
-                
-                <ul class="main-nav">
-                    <li class="main-nav-item">
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="main-nav-item">
-                        <a href="#">About Me</a>
-                    </li>
-                    <li class="main-nav-item">
-                        <a href="#">Projects</a>
-                    </li>
-                    <li class="main-nav-item">
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
+    <header id="header" class="header fixed inset-x-0 top-0 z-50">
+        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+                <a href="#main" class="-m-1.5 p-1.5">
+                    <span class="sr-only">A.S! Logo</span>
+                    <p class="text-4xl font-serif font-bold text-redneon-500 hover:text-red-400">A.S!</p>
+                </a>
             </div>
-        </div>
-    </header>
-    <div class="main-section">
-        <img class="main-section-background" src="assets/images/temp-image.jpg" alt="Main section image">
-        <div class="main-section-content-wrapper">
-            <div class="container">
-                <div class="main-section-content">
-                    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa.</p>
+            <div class="flex lg:hidden">
+                <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="nav hidden lg:flex lg:gap-x-8 lg:flex-1 lg:justify-end lg:items-center">
+                <a href="#main" class="nav-item text-sm leading-6 text-gray-900 hover:text-redneon-500">Home</a>
+                <a href="#aboutme" class="nav-item text-sm leading-6 text-gray-900 hover:text-redneon-500">About Me</a>
+                <a href="#projects" class="nav-item text-sm leading-6 text-gray-900 hover:text-redneon-500">Projects</a>
+                <a href="#contact" class="nav-item text-sm leading-6 text-gray-900 hover:text-redneon-500">Contact</a>
+                <a href="Almir_Santos_-_Full_Stack_Developer.pdf" download="Almir_Santos.pdf" class="text-sm leading-6 text-redneon-500 rounded border border-redneon-500 hover:bg-red-600 hover:text-white border-solid px-2 py-1">Resume</a>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <!-- Add JS events -->
+        <!-- Add JS events -->
+        <!-- Add JS events -->
+        <!-- Add JS events -->
+        <div class="lg:hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-50"></div>
+            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">A.S! Logo</span>
+                        <p class="text-4xl font-serif font-bold text-redneon-500 hover:text-red-400">A.S!</p>
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <a href="#main_section" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-blue-50">Home</a>
+                            <a href="#aboutme" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-blue-50">About Me</a>
+                            <a href="#projects" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-blue-50">Projects</a>
+                            <a href="#contact" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-blue-50">Contact</a>
+                            <!-- My resume  -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
+    
+    <main>
+        <section class="relative px-6 pt-14 lg:px-8" id="main">
+            <div class="particles-background" id="particles-js"></div>
+
+            <div class="container mx-auto">
+    
+                <div class="lg:grid lg:grid-cols-5 lg:items-center py-12 sm:py-15 lg:py-32">
+                    <div class="main-content col-span-3 text-start">
+                        <div class="pb-6">
+                            <h2 class="text-3xl font-bold tracking-tight text-gray-600 sm:text-5xl">
+                                The best developer in the world 
+                            </h2>
+                            <span class="text-xs tracking-tight font-thin font-sans">based on my mom opnion.</span>
+                        </div>
+                        <p class="max-w-xl text-gray-600">
+                            Jokes aside, My name is <strong>Almir Santos</strong> and I'm a <a href="#aboutme" class="text-redneon-500 hover:text-red-400">Fullstack Developer</a> specialized on Wordpress and Web Development with some experience on Team Leading. Lately I'm focused on Test/Learn new things (At least for me) and search for a place that I could aggregate some knowledge.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="fade-bg-gray-100 relative" id="aboutme">
+            <div class="bg-gray-100">
+                <div class="container mx-auto">
+                    <div class="sm:pm-0 lg:py-16">
+                        <div class="grid lg:gap-8 xl:gap-0 lg:grid-cols-5 lg:items-center justify-center">
+                            <div class="lg:col-span-2 h-72 lg:h-full">
+                                <img class="h-full mx-auto object-cover rounded-3xl animation-float shadow-lg lg:shadow-2xl" src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1024&h=1280&q=80" alt="Me but on photo">
+                            </div>
+                            <div class="pt-12 lg:pt-0 lg:col-span-3 text-center lg:text-left lg:justify-self-end text-gray-600">
+                                <h3 class="text-xl pb-3 font-bold tracking-tight text-redneon-500 sm:text-3xl">About me</h3>
+        
+                                <p class="mx-auto max-w-xl pb-8">
+                                    My focus is to develop projects that have something to add to people's lives. The story of how I became a developer is simple and kinda funny; I've always used a lot of technology since I was a kid, and I decided that I would become a developer without even knowing exactly what a developer did. From that moment, I started a technical course, did an internship as a Front-end Developer, and the rest is history.
+                                </p>
+                
+                                <p class="mx-auto max-w-xl pb-8">
+                                    Nowadays, I have experience in a little bit of everything that involves a website, including technical and non-technical areas. I have experience in creating and configuring servers, developing pixel-perfect frontend based on layout, backend development focused on business logic, and also experience in managing teams and clients.
+                                </p>
+                
+                                <p class="mx-auto max-w-xl pb-8">
+                                    Lately, I have been focusing more on understanding 'why' and 'how' some things work, and I have also been exercising thinking 'out of the box' to deliver a unique experience to the customer, so that they have something to add, not just deliver a website or functionality without worrying about who/how/why will use it. Challenges keep me motivated.
+                                </p>
+                                
+                                <div class="mx-auto max-w-sm md:max-w-xl">
+                                    <p>Some technologies that I do have more experience with:</p>
+                
+                                    <ul class="sm:text-left sm:grid gap-3 grid-cols-2 pt-3">
+                                        <li class="col-span-1 align-top break-words pb-3 sm:pb-0">
+                                            <span class="text-redneon-500">▹</span> 
+                                            <strong>PHP</strong><br class="hidden md:block">
+                                            (POO, Design Patterns, S.O.L.I.D)
+                                        </li>
+                                        <li class="col-span-1 align-top break-words pb-3 sm:pb-0">
+                                            <span class="text-redneon-500">▹</span> 
+                                            <strong>CSS/SASS/Tailwind</strong><br class="hidden md:block"> 
+                                            (Mobile-first, Cross-browser, Accessibility)
+                                        </li>
+                                        <li class="col-span-1 align-top break-words pb-3 sm:pb-0">
+                                            <span class="text-redneon-500">▹</span> 
+                                            <strong>Wordpress</strong> (Everything maybe?)
+                                        </li>
+                                        <li class="col-span-1 align-top break-words pb-3 sm:pb-0">
+                                            <span class="text-redneon-500">▹</span> 
+                                            <strong>JS/ES6/TS</strong>
+                                        </li>
+                                        <li class="col-span-1 align-top break-words pb-3 sm:pb-0">
+                                            <span class="text-redneon-500">▹</span> 
+                                            <strong>Laravel</strong>
+                                        </li>
+                                        <li class="col-span-1 align-top break-words">
+                                            <span class="text-redneon-500">▹</span> 
+                                            <strong>React/Next</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="relative" id="projects">
+            <div class="container">
+    
+                <div class="py-4 sm:py-8 lg:py-16">
+                    <h3 class="text-center text-xl font-bold tracking-tight text-redneon-500 sm:text-3xl pb-3">Projects</h3>
+    
+                    <div class="col-span-3">
+                        <p class="text-center pb-2 lg:pb-8 text-gray-600">
+                            “My code is my voice, my portfolio is my history.”
+                        </p>
+                    </div>
+    
+                    <div class="projects-wrapper">
+                        <div class="project mt-4 mb-12">
+                            <div class="mx-auto py-4">
+    
+                                <div class="relative isolate overflow-hidden bg-gray-50 px-6 py-8 shadow-lg sm:rounded-3xl sm:px-16 lg:py-4 lg:grid lg:grid-cols-2 lg:gap-x-20 lg:px-24 lg:pt-0">
+                                    <div class="lg:order-1 lg:col-span-1 mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-16 lg:text-left">
+                                        <h2 class="text-xl font-bold tracking-tight text-black sm:text-2xl">TOTVS</h2>
+                                        <div class="project-info py-6">
+                                            <p class="mt-2 text-lg leading-8 text-black">TOTVS is a LATAM technology company that offers innovative solutions to improve business management and efficiency.</p>
+        
+                                            <div class="grid grid-cols-2 lg:flex justify-center lg:justify-normal gap-3 pt-3">
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    PHP
+                                                </span>
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    JS
+                                                </span>
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    Blade Engine
+                                                </span>
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    Wordpress
+                                                </span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="pt-4 pb-10 lg:pb-0 flex items-center justify-center gap-x-6 lg:justify-start">
+                                            <a href="https://www.totvs.com/" target="_blank" class="flex justify-center items-center gap-1 rounded-md bg-redneon-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+                                                Live View
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-external-link"><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"></path></svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+    
+                                    <div class="lg:order-2 lg:col-span-1 relative self-center max-h-80 overflow-y-hidden rounded-3xl mx-auto">
+                                        <img class="project-autoscroll" style="transform: translateY(0%)" src="assets/images/totvs.webp" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="project mt-4 mb-12">
+                            <div class="mx-auto py-4">
+    
+                                <div class="relative isolate overflow-hidden bg-gray-50 px-6 py-8 shadow-lg sm:rounded-3xl sm:px-16 lg:py-4 lg:grid lg:grid-cols-2 lg:gap-x-20 lg:px-24 lg:pt-0">
+                                    <div class="lg:order-2 lg:col-span-1 mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-16 lg:text-left">
+                                        <h2 class="text-xl font-bold tracking-tight text-black sm:text-2xl">eCycle</h2>
+                                        <div class="project-info py-6">
+                                            <p class="mt-2 text-lg leading-8 text-black">eCycle is a blog dedicated to sustainability, providing information about ecological practices for a more sustainable lifestyle.</p>
+        
+                                            <div class="grid grid-cols-2 lg:flex justify-center lg:justify-normal gap-3 pt-3">
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    Leader
+                                                </span>
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    PHP
+                                                </span>
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    JS
+                                                </span>
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    Wordpress
+                                                </span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="pt-4 pb-10 lg:pb-0 flex items-center justify-center gap-x-6 lg:justify-start">
+                                            <a href="https://www.ecycle.com.br/" target="_blank" class="flex justify-center items-center gap-1 rounded-md bg-redneon-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+                                                Live View
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-external-link"><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"></path></svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+    
+                                    <div class="lg:order-1 lg:col-span-1 relative self-center max-h-80 overflow-y-hidden rounded-3xl mx-auto">
+                                        <img class="project-autoscroll" style="transform: translateY(0%)" src="assets/images/ecycle.webp" alt="">
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="project mt-4 mb-12">
+                            <div class="mx-auto py-4">
+    
+                                <div class="relative isolate overflow-hidden bg-gray-50 px-6 py-8 shadow-lg sm:rounded-3xl sm:px-16 lg:py-4 lg:grid lg:grid-cols-2 lg:gap-x-20 lg:px-24 lg:pt-0">
+                                    <div class="lg:order-1 lg:col-span-1 mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-16 lg:text-left">
+                                        <h2 class="text-xl font-bold tracking-tight text-black sm:text-2xl">Neon Aprenda</h2>
+                                        <div class="project-info py-6">
+                                            <p class="mt-2 text-lg leading-8 text-black">Neon Aprenda is an initiative by Neon Pagamentos that provides guidance and financial education to help people manage their finances better.</p>
+        
+                                            <div class="grid grid-cols-2 lg:flex justify-center lg:justify-normal gap-3 pt-3">
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    Leader
+                                                </span>
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    PHP
+                                                </span>
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    Wordpress
+                                                </span>
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    Hubspot
+                                                </span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="pt-4 pb-10 lg:pb-0 flex items-center justify-center gap-x-6 lg:justify-start">
+                                            <a href="https://neon.com.br/aprenda" target="_blank" class="flex justify-center items-center gap-1 rounded-md bg-redneon-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+                                                Live View
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-external-link"><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"></path></svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+    
+                                    <div class="lg:order-2 lg:col-span-1 relative self-center max-h-80 overflow-y-hidden rounded-3xl mx-auto">
+                                        <img class="project-autoscroll" style="transform: translateY(0%)" src="assets/images/neon_aprenda.webp" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="project mt-4 lg:mb-12">
+                            <div class="mx-auto py-4">
+    
+                                <div class="relative isolate overflow-hidden bg-gray-50 px-6 py-8 shadow-lg sm:rounded-3xl sm:px-16 lg:py-4 lg:grid lg:grid-cols-2 lg:gap-x-20 lg:px-24 lg:pt-0">
+                                    <div class="lg:order-2 lg:col-span-1 mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-16 lg:text-left">
+                                        <h2 class="text-xl font-bold tracking-tight text-black sm:text-2xl">Casa Kosé</h2>
+                                        <div class="project-info py-6">
+                                            <p class="mt-2 text-lg leading-8 text-black">Casa Kosé is an online store that offers high-quality beauty and wellness products for personal care at home.</p>
+        
+                                            <div class="grid grid-cols-2 lg:flex justify-center lg:justify-normal gap-3 pt-3">
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    Leader
+                                                </span>
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    PHP
+                                                </span>
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    Wordpress
+                                                </span>
+                                                <span class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-lg">
+                                                    Woocommerce
+                                                </span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="pt-4 pb-10 lg:pb-0 flex items-center justify-center gap-x-6 lg:justify-start">
+                                            <a href="https://casakose.com.br/" target="_blank" class="flex justify-center items-center gap-1 rounded-md bg-redneon-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+                                                Live View
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-external-link"><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"></path></svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+    
+                                    <div class="lg:order-1 lg:col-span-1 relative self-center max-h-80 overflow-y-hidden rounded-3xl mx-auto">
+                                        <img class="project-autoscroll" style="transform: translateY(0%)" src="assets/images/casakose.webp" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="fade-bg-gray-100" id="contact">
+            <div class="bg-gray-100">
+                <div class="container">
+                    <div class="pt-20">
+                        <h3 class="text-center text-xl font-bold tracking-tight text-redneon-500 sm:text-3xl pb-3">Contact</h3>
+                        <p class="text-center mx-auto max-w-xl pb-2 lg:pb-8 text-gray-600">
+                            Lets talk, get in touch.
+                        </p>
+    
+                        <div class="max-w-xl mx-auto lg:max-w-none pt-4 md:pt-8 md:grid md:grid-cols-2 lg:grid-cols-4">
+                            <div class="py-3">
+                                <p class="font-medium pl-3 border-l-2 border-redneon-500">Location</p>
+                                <p class="font-light text-sm pl-3 border-l-2 border-gray-300">São Paulo, Brazil</p>
+                            </div>
+    
+                            <div class="py-3">
+                                <p class="font-medium pl-3 border-l-2 border-redneon-500">Email</p>
+                                <a class="font-light text-sm pl-3 border-l-2 m-0 border-gray-300 block hover:text-redneon-500" href="mailto:almir200901@gmail.com">almir200901@gmail.com</a>
+                            </div>
+    
+                            <div class="py-3">
+                                <p class="font-medium pl-3 border-l-2 border-redneon-500">Phone/WhatsApp</p>
+                                <a class="font-light text-sm pl-3 border-l-2 border-gray-300 block hover:text-redneon-500" href="tel:+5511948728364">+5511948728364</a>
+                            </div>
+    
+                            <div class="py-3">
+                                <p class="font-medium pl-3 border-l-2 border-redneon-500">Linkedin</p>
+                                <a class="font-light text-sm pl-3 border-l-2 border-gray-300 block hover:text-redneon-500" href="https://www.linkedin.com/in/almirsantos99/">https://www.linkedin.com/in/almirsantos99/</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

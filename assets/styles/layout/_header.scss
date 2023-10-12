@@ -1,59 +1,9 @@
+
 .header {
-    position: absolute;
-    top: 48px;
-    padding: 16px;
-    left: 0;
-    right: 0;
-    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+}
 
-    a:hover {
-        opacity: 0.8;
-    }
-
-    .main-nav-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .main-logo {
-            font-weight: 600;
-            font-size: 48px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .main-nav {
-            display: flex;
-            column-gap: 30px;
-            list-style: none;
-
-            &-item {
-                a {
-                    text-transform: uppercase;
-                    text-decoration: none;
-                    color: #fff;
-                    font-family: Arial, Helvetica, sans-serif;
-                }
-            }
-        }
-    }
-
-    &.sticky {
-        background-color: #fff;
-
-        .main-nav-wrapper {
-            .main-logo {
-                color: #303030;
-            }
-
-            .main-nav {
-                &-item {
-                    a {
-                        color: #303030;
-                    }
-                }
-            }
-        }
-    }
+.header-fixed {
+  @apply shadow-sm;
 }

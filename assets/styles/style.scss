@@ -1,0 +1,12 @@
+@import "base/_transitions.scss";
+@import "base/_globals.scss";
+@import "layout/_header.scss";
+@import "components/_navs.scss";
+@import "utilities/_keyframes.scss";
+@import "utilities/_fade.scss";
+@import "utilities/_animations.scss";
+@import "utilities/_particles.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

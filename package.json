@@ -4,9 +4,12 @@
     "sass": "^1.67.0"
   },
   "scripts": {
-    "start": "http-server -c-1 -p 8081"
+    "start": "http-server -c-1 -p 8081",
+    "build": "node build.js"
   },
   "devDependencies": {
+    "autoprefixer": "^10.5.4",
+    "postcss": "^8.5.22",
     "postcss-import": "^15.1.0",
     "tailwindcss": "^3.3.3"
   }
